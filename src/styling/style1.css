@@ -1,0 +1,13 @@
+.page-foot{
+
+    background-color: #000000;
+    color:#fff;
+}
+.inner-container{
+    width: 960px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
