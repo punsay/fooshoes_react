@@ -1,11 +1,36 @@
 import React, { Component } from 'react';
-import { productsList } from './Constants/navitems';
+import Axios from 'axios';
+
 
 class Addons extends Component {
 
+    constructor() {
+        super();
+        this.state = {
+            productsList: [],
+        };
+    }
+
+    componentDidMount() {
+        this.getApiData();
+    }
+
+    getApiData = () => {
+        Axios.get('https://api.myjson.com/bins/uy2z6')
+            .then((response) => {
+                this.setState({ productsList: response.data }, () => {
+                    console.log(" >>>> ", this.state.productsList);
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
     render() {
 
-        const list = productsList.map((item) => {
+
+        const list = this.state.productsList.map((item) => {
 
             console.log("items", item);
             return (
