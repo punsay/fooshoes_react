@@ -3,6 +3,7 @@ import { Header } from './header';
 import Footer from './footer';
 import Navigation from './navigation';
 import Widget from './widget';
+import Addons from './addons';
 
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Navigation />
+                <Addons />
+                {/* <Navigation /> */}
                 <Widget />
                 <Footer />
             </div>
